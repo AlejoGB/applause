@@ -1,0 +1,15 @@
+#auth
+dash-client.json
+#docker
+docker-compose.yaml
+.env
+
+#cloud
+.gcloudignore
+app.yaml
+
+#python
+requirements.txt
+__pycache__
+.vscode
+dashsrv/
