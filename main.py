@@ -14,11 +14,15 @@ import dinalib as dl
 import json
 ''' Main Dash APP Cartas Dinamometricas '''
 
-with open('dash-client.json') as f:
-    try:
-        VALID_USERNAME_PASSWORD_PAIRS = json.load(f)
-    except json.decoder.JSONDecodeError as e:
-        print("de formato de archivo JSON : {}".format(e)) 
+# with open('dash-client.json') as f:
+#     try:
+#         VALID_USERNAME_PASSWORD_PAIRS = json.load(f)
+#     except json.decoder.JSONDecodeError as e:
+#         print("de formato de archivo JSON : {}".format(e)) 
+
+VALID_USERNAME_PASSWORD_PAIRS = {
+    "rfindustrial": "RFI#123"
+}
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 auth = dash_auth.BasicAuth(
