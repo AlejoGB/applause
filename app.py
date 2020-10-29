@@ -29,6 +29,9 @@ auth = dash_auth.BasicAuth(
     app,
     VALID_USERNAME_PASSWORD_PAIRS
 )
+
+server = app.server
+
 app.layout = html.Div([sidebar, content])
 
 
