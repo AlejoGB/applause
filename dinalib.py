@@ -18,10 +18,13 @@ class DinaConfig():
     dinamómetro
     '''
     
-    def __init__(self, configPath):
+    def __init__(self, configPath, dtype='JSON'):
 
-        with open(configPath) as f:
-            config = json.load(f)
+        if dtype == 'dict':
+            config = configPath
+        if dtype == 'JSON':
+            with open(configPath) as f:
+                config = json.load(f)
         self.pozoID = config['Pozo']['ID']
         self.carrera = config['Pozo']['Carrera']
         self.span = (config['Celda']['PesoConocido2'] - config['Celda']['PesoConocido1'])/(config['Celda']['Referencia2']-config['Celda']['Referencia1'])
