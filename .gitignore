@@ -9,7 +9,6 @@ docker-compose.yaml
 app.yaml
 
 #python
-requirements.txt
 __pycache__
 .vscode
 dashsrv/
