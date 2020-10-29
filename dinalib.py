@@ -43,7 +43,7 @@ class DinaProc(DinaConfig):
         hopsize = 30  int porcion de muestra para la detección de un ciclo
     '''
     def __init__(self, configPath, data, samples, dtype='hexa', **kwargs):
-        super(DinaProc, self).__init__(configPath)
+        super(DinaProc, self).__init__(configPath, dtype=kwargs.get('config_dtype', 'JSON') )
         self.dtype = dtype    
         self.samples = samples
         self.splitchar = kwargs.get('splitchar', '')
